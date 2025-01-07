@@ -1,8 +1,16 @@
-import { Box, Button, Container, Flex, Image, Text } from '@chakra-ui/react'
+import {
+  Box,
+  Button,
+  Container,
+  Flex,
+  Image,
+  Text,
+  useColorMode,
+  useColorModeValue,
+} from '@chakra-ui/react'
 import React from 'react'
 import { IoMoon } from 'react-icons/io5'
 import { LuSun } from 'react-icons/lu'
-import { useColorMode, useColorModeValue } from './ui/color-mode'
 import CreateUserModal from './CreateUserModal'
 
 const Navbar = () => {

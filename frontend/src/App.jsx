@@ -11,7 +11,7 @@ function App() {
         my={4}
       >
         <Text
-          fontSize={{ base: '4xl', md: '50' }}
+          fontSize={{ base: '3xl', md: '50' }}
           fontWeight={'bold'}
           letterSpacing={'2px'}
           textTransform={'uppercase'}
@@ -20,11 +20,10 @@ function App() {
         >
           <Text
             as={'span'}
-            // bgGradient="linear(to-r, cyan.400, blue.500)"
-            color={'cyan.400'}
-            // bgClip={'text'}
+            bgGradient={'linear(to-r, cyan.400, blue.500)'}
+            bgClip={'text'}
           >
-            My Besties
+            My Buddies
           </Text>
           🚀
         </Text>
