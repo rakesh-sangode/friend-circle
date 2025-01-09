@@ -1,11 +1,16 @@
 import { Container, Stack, Text } from '@chakra-ui/react'
 import Navbar from './components/Navbar'
 import UserGrid from './components/UserGrid'
-
+import { useState } from 'react'
+export const BASE_URL =
+  import.meta.env.MODE === 'development' ? 'http://127.0.0.1:5000/api' : '/api'
 function App() {
+  const [users, setUsers] = useState([])
+  console.log('hello')
+  console.log('users: ', users)
   return (
     <Stack minH={'100vh'}>
-      <Navbar />
+      <Navbar setUsers={setUsers} />
       <Container
         maxW={'1200px'}
         my={4}
@@ -27,7 +32,10 @@ function App() {
           </Text>
           🚀
         </Text>
-        <UserGrid />
+        <UserGrid
+          users={users}
+          setUsers={setUsers}
+        />
       </Container>
     </Stack>
   )
